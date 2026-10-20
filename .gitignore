@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs y editores
+.idea/
+.vscode/*
+!.vscode/tasks.json
+*.sublime-project
+*.sublime-workspace
+
+# Temporales
+tmp/
+*.tmp

@@ -5,7 +5,7 @@
   "description": "Repositorio de agent skills y agentes portables — suite de verificación estructural (cero dependencias).",
   "type": "module",
   "scripts": {
-    "test": "node --test \"test/*.test.mjs\"",
+    "test": "node --test \"test/*.test.mjs\" \"skills/documentacion/test/*.test.mjs\"",
     "skills:discover": "npx --yes skills add . -l"
   },
   "engines": {

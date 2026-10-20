@@ -21,6 +21,7 @@ Router) el trabajo va a `frontend-next`.
    - `formularios-frontend` — schema Zod sincronizado con el contrato, errores inline.
    - `estados-toast-frontend` — loading/empty/error/success + toast accesible.
    - `ui-bloques-frontend` — paginación en URL, tokens/tema, Intl, modales accesibles.
+   - `accesibilidad-frontend` — teclado, ARIA, foco en modales, contraste y responsive.
 2. **Un solo data layer.** Todo request pasa por el cliente HTTP de la feature y
    TanStack Query; ningún componente hace `fetch` directo ni duplica cache.
 3. **El contrato manda.** Los tipos y schemas del frontend se sincronizan con el
