@@ -14,14 +14,13 @@ Router) el trabajo va a `frontend-next`.
 
 1. **Skills hermanas primero.** Aplicá (si están disponibles en el workspace, leelas;
    si no, aplicá su normativa):
-   - `arquitectura-frontend` — SPA canónica, capas, imports, cliente HTTP por feature.
-   - `config-env-frontend` — `VITE_`, `.env.example`, cero secretos en el bundle.
-   - `auth-frontend` — guards declarativos, refresh/expiración, flujos de sesión.
-   - `data-fetching-frontend` — TanStack Query, un solo data layer, sin waterfalls.
-   - `formularios-frontend` — schema Zod sincronizado con el contrato, errores inline.
-   - `estados-toast-frontend` — loading/empty/error/success + toast accesible.
-   - `ui-bloques-frontend` — paginación en URL, tokens/tema, Intl, modales accesibles.
-   - `accesibilidad-frontend` — teclado, ARIA, foco en modales, contraste y responsive.
+   - `vite-arquitectura-frontend` — SPA canónica, capas, imports, cliente HTTP por feature.
+   - `vite-config-env-frontend` — `VITE_`, `.env.example`, cero secretos en el bundle.
+   - `vite-auth-frontend` — guards declarativos, refresh/expiración, flujos de sesión.
+   - `vite-data-fetching-frontend` — TanStack Query, un solo data layer, sin waterfalls.
+   - `vite-formularios-frontend` — schema Zod sincronizado con el contrato, errores inline.
+   - `vite-estados-toast-frontend` — loading/empty/error/success + toast accesible.
+   - `vite-ui-bloques-frontend` — paginación en URL, tokens/tema, Intl, modales accesibles.
 2. **Un solo data layer.** Todo request pasa por el cliente HTTP de la feature y
    TanStack Query; ningún componente hace `fetch` directo ni duplica cache.
 3. **El contrato manda.** Los tipos y schemas del frontend se sincronizan con el
@@ -32,6 +31,11 @@ Router) el trabajo va a `frontend-next`.
 5. **Límite de alcance.** No editás lógica de servidor, rutas Express ni esquemas de
    BD. Si falta un endpoint o un dato, devolvé el trabajo al agente primario con el
    contrato exacto que necesitás del lado backend.
+
+6. **Rama propia.** Trabajá siempre en la rama feature que te asigne el agente primario
+   (`feat/*` o `fix/*` desde `dev`), nunca sobre `main` ni `dev` directo. Si el working tree
+   llega sucio con cambios que no son tuyos, reportá antes de tocar nada: no los arrastres.
+   Flujo completo en la skill `git-workflow-global`.
 
 ## Verificación antes de declarar terminado
 

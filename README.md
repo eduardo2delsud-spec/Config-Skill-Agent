@@ -16,43 +16,63 @@ SKILL/
 ├── test/          # la suite (node:test): estructura, triggers y sincronización documental
 ├── .github/       # CI: workflow `verify` corre npm test + npx skills add . -l en cada PR
 ├── skills/        # contenedor canónico de skills (lo descubre npx skills)
-│   ├── backend/   # skills de backend (9 activas)
-│   ├── frontend/  # skills de frontend (8 activas)
+│   ├── backend-node/  # skills de backend Node/Express (9 activas)
+│   ├── frontend-vite/ # skills de frontend Vite/SPA (8 activas)
+│   ├── frontend-next/ # skills de frontend Next.js App Router (8 activas)
 │   ├── qa-test/   # skills de QA/testing (3 activas)
-│   ├── documentacion/ # skills de documentación ejecutiva (1 activa)
+│   ├── documentacion/ # skills de documentación ejecutiva (2 activas)
 │   ├── devops/    # reservada
-│   └── global/    # skills globales front+back (8 activas)
+│   └── global/    # skills globales front+back (9 activas)
 └── agents/        # agentes portables: backend-node, database-drizzle, frontend-vite, frontend-next
 ```
 
 ## Catálogo
 
-### skills/backend/
+### skills/backend-node/
+
+Backend Node/Express/TypeScript — el stack por defecto del servidor.
 
 | Skill | Dispara con | Qué resuelve |
 |---|---|---|
-| [`arquitectura-backend`](skills/backend/arquitectura-backend/SKILL.md) | "estructura del proyecto", "dónde va este archivo", "separación de capas" | Árbol canónico, tabla de dependencias por capa, estructura única (dominio vs capa), verificación de imports violados |
-| [`arquitectura-drizzle-backend`](skills/backend/arquitectura-drizzle-backend/SKILL.md) | "estructura de drizzle", "organizar schemas", "un archivo por tabla", "drizzle.config" | Árbol de `src/db/` con Drizzle: 1 tabla = 1 archivo + barrel, cliente único, relations, seeds idempotentes, `drizzle/` en la raíz |
-| [`autenticacion-jwt-backend`](skills/backend/autenticacion-jwt-backend/SKILL.md) | "JWT", "login", "token", "refresh token", "proteger ruta" | Middleware verifyToken, tokens cortos, refresh rotation, almacenamiento seguro, hash de passwords |
-| [`base-datos-conexion-backend`](skills/backend/base-datos-conexion-backend/SKILL.md) | "conexión a la base", "pool", "migraciones", "transacción" | Pool único, capa de acceso a datos, transacciones con release, migraciones versionadas |
-| [`config-env-backend`](skills/backend/config-env-backend/SKILL.md) | "agregar variable de entorno", "JWT_SECRET", ".env.example" | Módulo único de config con validación fail-fast, `.env.example` como fuente de truth, cero secretos |
-| [`errores-respuestas-backend`](skills/backend/errores-respuestas-backend/SKILL.md) | "error 500", "error handler", "404", "try catch" | Handler central + 404 catch-all, controllers que lanzan y no responden, shape única de error |
-| [`logging-ops-backend`](skills/backend/logging-ops-backend/SKILL.md) | "logger", "no loguea", "console.log en prod", "health check" | Un logger por proyecto, niveles correctos, health check real, logs fuera del repo |
-| [`testing-backend`](skills/backend/testing-backend/SKILL.md) | "test", "jest", "vitest", "supertest", "mock", "cobertura" | Pirámide de tests, BD de test aislada, fixtures centralizados, mocking correcto, CI |
-| [`validacion-entrada-backend`](skills/backend/validacion-entrada-backend/SKILL.md) | "validar body", "Joi", "Zod", "400 bad request" | Middleware de validación en el 100% de rutas con input, errores 400 con details |
+| [`node-arquitectura-backend`](skills/backend-node/node-arquitectura-backend/SKILL.md) | "estructura del proyecto", "dónde va este archivo", "separación de capas" | Árbol canónico, tabla de dependencias por capa, estructura única (dominio vs capa), verificación de imports violados |
+| [`arquitectura-drizzle-backend`](skills/backend-node/arquitectura-drizzle-backend/SKILL.md) | "estructura de drizzle", "organizar schemas", "un archivo por tabla", "drizzle.config" | Árbol de `src/db/` con Drizzle: 1 tabla = 1 archivo + barrel, cliente único, relations, seeds idempotentes, `drizzle/` en la raíz |
+| [`node-autenticacion-jwt-backend`](skills/backend-node/node-autenticacion-jwt-backend/SKILL.md) | "JWT", "login", "token", "refresh token", "proteger ruta" | Middleware verifyToken, tokens cortos, refresh rotation, almacenamiento seguro, hash de passwords |
+| [`node-base-datos-conexion-backend`](skills/backend-node/node-base-datos-conexion-backend/SKILL.md) | "conexión a la base", "pool", "migraciones", "transacción" | Pool único, capa de acceso a datos, transacciones con release, migraciones versionadas |
+| [`node-config-env-backend`](skills/backend-node/node-config-env-backend/SKILL.md) | "agregar variable de entorno", "JWT_SECRET", ".env.example" | Módulo único de config con validación fail-fast, `.env.example` como fuente de truth, cero secretos |
+| [`node-errores-respuestas-backend`](skills/backend-node/node-errores-respuestas-backend/SKILL.md) | "error 500", "error handler", "404", "try catch" | Handler central + 404 catch-all, controllers que lanzan y no responden, shape única de error |
+| [`node-logging-ops-backend`](skills/backend-node/node-logging-ops-backend/SKILL.md) | "logger", "no loguea", "console.log en prod", "health check" | Un logger por proyecto, niveles correctos, health check real, logs fuera del repo |
+| [`node-testing-backend`](skills/backend-node/node-testing-backend/SKILL.md) | "test", "jest", "vitest", "supertest", "mock", "cobertura" | Pirámide de tests, BD de test aislada, fixtures centralizados, mocking correcto, CI |
+| [`node-validacion-entrada-backend`](skills/backend-node/node-validacion-entrada-backend/SKILL.md) | "validar body", "Joi", "Zod", "400 bad request" | Middleware de validación en el 100% de rutas con input, errores 400 con details |
 
-### skills/frontend/
+### skills/frontend-vite/
+
+Frontend SPA Vite + React (react-router, TanStack Query).
 
 | Skill | Dispara con | Qué resuelve |
 |---|---|---|
-| [`accesibilidad-frontend`](skills/frontend/accesibilidad-frontend/SKILL.md) | "accesibilidad", "a11y", "WCAG", "lector de pantalla", "responsive", "breakpoints" | WCAG 2.1 AA: teclado, ARIA, foco en modales, contraste 4.5:1, jerarquía de headings, mobile-first |
-| [`arquitectura-frontend`](skills/frontend/arquitectura-frontend/SKILL.md) | "estructura del frontend", "dónde va este archivo", "por feature", "prop drilling", "diseno de componentes" | SPA canónica, tabla de dependencias por capa, diseño de componentes (composición > configuración), escala de estado, prop drilling ≤3 |
-| [`auth-frontend`](skills/frontend/auth-frontend/SKILL.md) | "login", "guard de ruta", "sesión", "recuperar contraseña" | Paquete completo de auth: 8 flujos, guards declarativos, refresh/expiración |
-| [`config-env-frontend`](skills/frontend/config-env-frontend/SKILL.md) | "VITE_", ".env.example", "secretos en el front" | Variables públicas con prefijo y cero secretos en el bundle |
-| [`data-fetching-frontend`](skills/frontend/data-fetching-frontend/SKILL.md) | "tanstack query", "fetch", "cache", "cliente http", "optimistic" | Cliente por feature, query keys consistentes, un solo data layer, optimistic updates con rollback |
-| [`estados-toast-frontend`](skills/frontend/estados-toast-frontend/SKILL.md) | "loading", "empty state", "toast", "reintentar" | 4 estados de vista + toast global accesible (ARIA) |
-| [`formularios-frontend`](skills/frontend/formularios-frontend/SKILL.md) | "formularios", "validación", "zod", "errores inline" | Schema Zod sincronizado con el contrato, errores inline, trampas de fechas |
-| [`ui-bloques-frontend`](skills/frontend/ui-bloques-frontend/SKILL.md) | "paginación", "design tokens", "tema oscuro", "changelog", "design system", "espaciado" | Paginación en URL, tokens/tema, design system adherence (anti "aesthetic AI"), formateo Intl, modal de info accesible |
+| [`vite-arquitectura-frontend`](skills/frontend-vite/vite-arquitectura-frontend/SKILL.md) | "estructura del frontend", "por feature", "prop drilling" | SPA canónica, tabla de dependencias por capa, diseño de componentes (composición > configuración), escala de estado, prop drilling ≤3 |
+| [`vite-config-env-frontend`](skills/frontend-vite/vite-config-env-frontend/SKILL.md) | "VITE_", ".env.example", "secretos en el front" | Variables públicas con prefijo y cero secretos en el bundle |
+| [`vite-auth-frontend`](skills/frontend-vite/vite-auth-frontend/SKILL.md) | "login", "sesión", "recuperar contraseña" | Paquete completo de auth: 8 flujos, guards declarativos, refresh/expiración |
+| [`vite-data-fetching-frontend`](skills/frontend-vite/vite-data-fetching-frontend/SKILL.md) | "tanstack query", "fetch", "cache", "cliente http", "optimistic" | Cliente por feature, query keys consistentes, un solo data layer, optimistic updates con rollback |
+| [`vite-formularios-frontend`](skills/frontend-vite/vite-formularios-frontend/SKILL.md) | "formularios", "validación", "zod", "errores inline" | Schema Zod sincronizado con el contrato, errores inline, trampas de fechas |
+| [`vite-estados-toast-frontend`](skills/frontend-vite/vite-estados-toast-frontend/SKILL.md) | "loading", "empty state", "toast", "reintentar" | 4 estados de vista + toast global accesible (ARIA) |
+| [`vite-ui-bloques-frontend`](skills/frontend-vite/vite-ui-bloques-frontend/SKILL.md) | "paginación", "design tokens", "tema oscuro", "changelog", "design system" | Paginación en URL, tokens/tema, design system adherence (anti "aesthetic AI"), formateo Intl, modal de info accesible |
+| [`vite-accesibilidad-frontend`](skills/frontend-vite/vite-accesibilidad-frontend/SKILL.md) | "accesibilidad", "a11y", "WCAG", "lector de pantalla", "responsive" | WCAG 2.1 AA: teclado, ARIA, foco en modales, contraste 4.5:1, jerarquía de headings, mobile-first |
+
+### skills/frontend-next/
+
+Frontend Next.js App Router (Server Components, Server Actions, caché y revalidación).
+
+| Skill | Dispara con | Qué resuelve |
+|---|---|---|
+| [`next-arquitectura-frontend`](skills/frontend-next/next-arquitectura-frontend/SKILL.md) | "app router", "server components", "route groups" | Árbol `app/` por segmentos, `'use client'` mínimo, tabla de dependencias por capa, ubicación de page/layout/action |
+| [`next-config-env-frontend`](skills/frontend-next/next-config-env-frontend/SKILL.md) | "NEXT_PUBLIC_", "server only", "secretos en el front" | `NEXT_PUBLIC_` = exposición pública, resto server-only protegido con `import "server-only"`, `.env.example` completo |
+| [`next-auth-frontend`](skills/frontend-next/next-auth-frontend/SKILL.md) | "auth middleware", "session cookie next", "flujos de auth" | Sesión en cookie httpOnly, guards en middleware liviano, actions de login/logout, paquete de 8 flujos |
+| [`next-data-fetching-frontend`](skills/frontend-next/next-data-fetching-frontend/SKILL.md) | "revalidatepath", "revalidate tag", "datos en server components" | Fetchers en `lib/` con política de caché explícita, `Promise.all` anti-waterfall, actions + revalidación |
+| [`next-formularios-frontend`](skills/frontend-next/next-formularios-frontend/SKILL.md) | "server actions forms", "use action state", "errores inline" | Schema Zod compartido cliente/servidor, submit vía `useActionState`, errores inline por campo |
+| [`next-estados-toast-frontend`](skills/frontend-next/next-estados-toast-frontend/SKILL.md) | "loading.tsx", "error boundary", "suspense" | `loading.tsx`/`error.tsx` por segmento, Suspense granular, empty/retry, toast accesible en isla cliente |
+| [`next-ui-bloques-frontend`](skills/frontend-next/next-ui-bloques-frontend/SKILL.md) | "searchparams", "paginacion", "design tokens" | Paginación en `searchParams`, tokens en `globals.css`, anti "aesthetic AI", modal de info accesible |
+| [`next-accesibilidad-frontend`](skills/frontend-next/next-accesibilidad-frontend/SKILL.md) | "accesibilidad", "a11y", "WCAG", "foco" | WCAG 2.1 AA en App Router: landmarks, foco tras la navegación, `aria-busy` con streaming, mobile-first |
 
 ### skills/global/
 
@@ -65,6 +85,7 @@ Skills transversales: aplican por igual a backend y frontend.
 | [`contrato-api-global`](skills/global/contrato-api-global/SKILL.md) | "contrato de la api", "contract first", "diseñar endpoint", "interface typescript", "cambiar la api" | Contract-first, una estrategia de errores + status, validación solo en bordes, adición > modificación, naming predecible |
 | [`crear-skill-global`](skills/global/crear-skill-global/SKILL.md) | "crear skill", "nueva skill", "editar skill", "SKILL.md", "triggers" | Intención → borrador con estructura fija → description anti-trap → suite de verificación → iteración con uso real |
 | [`generador-estimaciones-global`](skills/global/generador-estimaciones-global/SKILL.md) | "crear estimación", "estimar horas", "tiempos de desarrollo", "cuánto tarda", "estimación QA" | Docs HTML por rol con horas prellenadas (propuesta del agente), tabla Tarea × Horas, subtotales, total y semanas; listo para imprimir a PDF |
+| [`git-workflow-global`](skills/global/git-workflow-global/SKILL.md) | "ramas", "rama", "branch", "git", "merge", "dev", "trabajar en paralelo" | Workflow `main` → `dev` → `feat/*`: una rama por cambio, working tree limpio, lint + typecheck + tests antes de `merge --no-ff`; agentes en paralelo sin pisarse |
 | [`simplificar-codigo-global`](skills/global/simplificar-codigo-global/SKILL.md) | "simplificar codigo", "refactor", "limpiar codigo", "reducir complejidad", "funcion larga" | Comportamiento idéntico con tests intactos: valla de Chesterton, 5 principios, equilibrio anti sobre-simplificación |
 | [`tasks-vscode-global`](skills/global/tasks-vscode-global/SKILL.md) | "tasks.json", "tarea de vscode", "levantar servicios", "npm run dev", "task ALL" | `.vscode/tasks.json` solo de servicios dev: una task por servicio (`powershell -NoExit`, `isBackground`, panel propio) + agregadores grupo/ALL en paralelo con `dependsOn` |
 | [`tdd-global`](skills/global/tdd-global/SKILL.md) | "TDD", "test primero", "red green", "reproducir el bug", "prove it", "test de regresion" | Ciclo RED-GREEN-REFACTOR, Prove-It para bugs, pirámide de tests; descubrir el stack antes del primer test |
@@ -86,7 +107,8 @@ Documentos ejecutivos: se aplican cuando hay que presentar o documentar una feat
 
 | Skill | Dispara con | Qué resuelve |
 |---|---|---|
-| [`documentacion`](skills/documentacion/SKILL.md) | "documento de presentación", "presentar feature", "presentar implementación", "documento para el rol administrativo", "briefing de feature", "uno técnico y otro sin jerga" | DOS HTML ejecutivos autocontenidos desde un mismo JSON tipado validado por CLI propia (`bin/presentador.mjs`): técnico (`YYYYMMDD-<slug>.html` con portada, contexto, alcance, flujo, historias, plan con horas e impacto técnico) + simple (`YYYYMMDD-<slug>-simple.html` en lenguaje llano con pasos, horas por equipo y nota aclaratoria), tema claro/oscuro, imprimibles a A4 |
+| [`documentacion`](skills/documentacion/documentacion/SKILL.md) | "documento de presentación", "presentar feature", "presentar implementación", "documento para el rol administrativo", "briefing de feature", "uno técnico y otro sin jerga" | DOS HTML ejecutivos autocontenidos desde un mismo JSON tipado validado por CLI propia (`bin/presentador.mjs`): técnico (`YYYYMMDD-<slug>.html` con portada, contexto, alcance, flujo, historias, plan con horas e impacto técnico) + simple (`YYYYMMDD-<slug>-simple.html` en lenguaje llano con pasos, horas por equipo y nota aclaratoria), tema claro/oscuro, imprimibles a A4 |
+| [`documentacion-proyecto-global`](skills/documentacion/documentacion-proyecto-global/SKILL.md) | "documentación del proyecto", "acta de constitución", "alcance del proyecto", "objetivos SMART", "ERS", "requisitos del sistema", "EDT", "WBS", "cronograma de hitos", "gantt", "matriz RACI", "mapa de stakeholders", "plan de riesgos", "control de cambios", "plan de comunicaciones", "visión de producto", "lean canvas", "unit economics", "go to market", "plan de sprints", "set de documentos", "PMBOK" | Set de documentos Markdown del proyecto en 6 fases (`00-inicio` … `06-cierre`) generado por CLI propia (`bin/pmdocs.mjs`) desde un JSON tipado validado por schema: acta de constitución, stakeholders, objetivos SMART, visión de producto, alcance del MVP, ERS, EDT/WBS, cronograma de hitos en Gantt, RACI, riesgos, control de cambios, comunicaciones, arquitectura, modelo de datos, contratos de API, seguridad y privacidad, UX, ADR, pricing y unit economics, go-to-market, plan de sprints, calidad y runbook, y plantillas de cierre; cada documento con bloque de metadatos, control de versiones y Mermaid, tailoring `solo`/`equipo`, índice maestro, visor HTML autocontenido con búsqueda y tema oscuro (`index.html`) más servidor local (`serve.mjs` + `docs.cmd`) y 12 gates |
 
 ### agents/
 
@@ -104,11 +126,13 @@ Agentes portables (formato neutral: `name` + `description` + body como prompt).
 Para armar un proyecto desde cero con estas skills, seguir la cadena de dependencias — cada
 eslabón asume los anteriores:
 
-**Backend:**
-`arquitectura-backend` → `config-env-backend` → `autenticacion-jwt-backend` → `base-datos-conexion-backend` → `arquitectura-drizzle-backend` (si el ORM es Drizzle) → `validacion-entrada-backend` → `errores-respuestas-backend` → `logging-ops-backend` → `testing-backend`
+**Backend (Node/Express):**
+`node-arquitectura-backend` → `node-config-env-backend` → `node-autenticacion-jwt-backend` → `node-base-datos-conexion-backend` → `arquitectura-drizzle-backend` (si el ORM es Drizzle) → `node-validacion-entrada-backend` → `node-errores-respuestas-backend` → `node-logging-ops-backend` → `node-testing-backend`
 
-**Frontend:**
-`arquitectura-frontend` → `config-env-frontend` → `auth-frontend` → `data-fetching-frontend` → `formularios-frontend` → `estados-toast-frontend` → `ui-bloques-frontend` → `accesibilidad-frontend`
+**Frontend (según el stack del proyecto):**
+
+- **Vite/SPA:** `vite-arquitectura-frontend` → `vite-config-env-frontend` → `vite-auth-frontend` → `vite-data-fetching-frontend` → `vite-formularios-frontend` → `vite-estados-toast-frontend` → `vite-ui-bloques-frontend` → `vite-accesibilidad-frontend`
+- **Next.js App Router:** `next-arquitectura-frontend` → `next-config-env-frontend` → `next-auth-frontend` → `next-data-fetching-frontend` → `next-formularios-frontend` → `next-estados-toast-frontend` → `next-ui-bloques-frontend` → `next-accesibilidad-frontend`
 
 **Global (ambos lados):** `changelog-global` — cada cambio funcional se registra en el
 `CHANGELOG.md` del servicio en el mismo gesto, sin importar de qué lado sea.
@@ -125,6 +149,11 @@ dataflow o estados a partir del código o de una descripción (skill externa, MI
 implementación de un servicio a un rol: genera el par de HTML ejecutivos (técnico + simple en
 lenguaje llano, ambos con prefijo `YYYYMMDD-`) con el alcance acordado;
 ese alcance es lo que después se estima (`generador-estimaciones-global`) y se implementa.
+`documentacion-proyecto-global` - cuando haya que **documentar el proyecto entero**:
+genera el set de documentos Markdown en 6 fases (acta, stakeholders, SMART, visión, alcance
+MVP, ERS, EDT/WBS, Gantt, RACI, riesgos, arquitectura, datos, API, seguridad, negocio, sprints,
+calidad, cierre) con metadatos, control de versiones, Mermaid, tailoring por tamaño de equipo y
+un visor HTML + servidor local (`index.html` + `serve.mjs` + `docs.cmd`) para leerlo en el navegador.
 
 **QA (`qa-test/`):** se aplican en los momentos de control, no en el arranque —
 `playwright-cli` para verificar en navegador (runtime), `postman-builder` para colecciones
@@ -204,7 +233,7 @@ cero dependencias) que codifica los 6 checks de
 
 ```bash
 npm test             # estructura + triggers + sincronización (README/AGENTS.md/CHANGELOG)
-npx skills add . -l  # el ecosistema sigue descubriendo las 29 skills
+npx skills add . -l  # el ecosistema sigue descubriendo las 39 skills
 ```
 
 | Archivo | Qué cubre |
