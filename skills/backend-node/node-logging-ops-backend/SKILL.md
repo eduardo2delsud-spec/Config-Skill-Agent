@@ -1,6 +1,8 @@
 ---
 name: node-logging-ops-backend
 description: 'Single structured logger (Winston) for Express backends, correct levels, health check and log hygiene. Use when logs are missing, console.* in production, duplicated loggers, committed .log files, or to set up/fix logging and health endpoints. Triggers: "logger", "winston", "no loguea", "console.log en prod", "health check", "log rotacion", "morgan", "logging", "errores en log".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Backend Logging Ops — un logger, niveles correctos, sin ruido

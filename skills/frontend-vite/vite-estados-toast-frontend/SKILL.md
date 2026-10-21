@@ -1,6 +1,8 @@
 ---
 name: vite-estados-toast-frontend
 description: 'The four view states (loading/empty/error/retry) and an accessible global toast system for React SPAs. Use when a page loads data, shows no-data or error, or when adding notifications. Triggers: "loading", "skeleton", "empty state", "estado vacio", "reintentar", "toast", "notificaciones", "snackbar", "estado de error", "spinner".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Estados y Toast — toda vista de datos cubre 4 estados, todo error avisa

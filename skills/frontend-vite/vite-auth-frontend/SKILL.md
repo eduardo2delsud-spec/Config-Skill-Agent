@@ -1,6 +1,8 @@
 ---
 name: vite-auth-frontend
 description: 'Complete authentication package for React SPAs (login, register, session, guards). Use when adding login, auth screens, route guards, token refresh, logout, or when auth flows are missing. Triggers: "login", "autenticacion", "guardar ruta", "sesion", "cerrar sesion", "registro", "recuperar contraseña", "refresh token", "flujos de auth".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Auth Frontend — si hay login, el paquete completo

@@ -2,6 +2,8 @@
 name: playwright-cli
 description: 'Automatiza un navegador en vivo desde la terminal con npx playwright cli: snapshots con refs, clicks/fills, screenshots, consola y red para verificar la UI en runtime, sin MCP ni config global. Use when the agent needs to open the app, navigate, click, fill forms, inspect the DOM, do UI review, capture screenshots/traces, or drive E2E flows manually. Triggers: "abrir en el navegador", "verificar en el browser", "screenshot de la app", "snapshot", "playwright cli", "consola del navegador", "e2e manual".'
 license: MIT
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Playwright CLI — navegador en vivo desde la terminal

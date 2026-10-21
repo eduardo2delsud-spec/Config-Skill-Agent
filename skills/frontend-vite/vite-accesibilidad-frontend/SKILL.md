@@ -1,6 +1,8 @@
 ---
 name: vite-accesibilidad-frontend
 description: 'Accesibilidad WCAG 2.1 AA y responsive mobile-first para el SPA: teclado completo, ARIA correcto, gestión de foco en modales, contraste 4.5:1, jerarquía de headings y breakpoints probados. Use when building or modifying UI, reviewing a11y, or when the interface must work with keyboard, screen readers, or small screens. Triggers: "accesibilidad", "a11y", "WCAG", "lector de pantalla", "teclado", "foco", "contraste", "responsive", "mobile first", "breakpoints", "aria-label".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Accesibilidad y Responsive — WCAG 2.1 AA + mobile-first

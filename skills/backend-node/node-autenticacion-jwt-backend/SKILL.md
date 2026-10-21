@@ -1,6 +1,8 @@
 ---
 name: node-autenticacion-jwt-backend
 description: 'JWT authentication middleware for Express backends (sign, verify, refresh rotation, secure storage). Use when adding login, protecting routes, implementing refresh tokens, or auditing auth security. Triggers: "JWT", "login", "token", "autenticación", "refresh token", "proteger ruta", "verifyToken", "middleware de auth", "bcrypt", "hash password".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Autenticación JWT — un middleware, tokens cortos, refresh rotation

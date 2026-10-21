@@ -1,6 +1,8 @@
 ---
 name: next-estados-toast-frontend
 description: 'Next.js view states: loading.tsx/error.tsx per segment, granular Suspense, empty state with retry and an accessible global toast in a client island. Use when a page loads data, shows no-data or error, or when adding notifications in a Next project. Triggers: "loading", "skeleton", "empty state", "estado vacio", "reintentar", "toast", "notificaciones", "snackbar", "estado de error", "spinner", "loading.tsx", "error boundary", "suspense".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Estados y Toast Next — `loading.tsx`/`error.tsx` por segmento, toast accesible

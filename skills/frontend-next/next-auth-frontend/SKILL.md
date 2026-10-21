@@ -1,6 +1,8 @@
 ---
 name: next-auth-frontend
 description: 'Complete authentication for Next.js App Router: session in httpOnly cookie, middleware guards, server actions for login/logout and refresh in server code. Use when adding login to a Next project, protecting routes, implementing session/refresh, or auditing auth flows. Triggers: "autenticacion", "guardar ruta", "sesion", "cerrar sesion", "registro", "recuperar contraseña", "flujos de auth", "auth middleware", "session cookie next".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Auth Frontend Next — sesión en cookie httpOnly, guards en middleware

@@ -1,6 +1,8 @@
 ---
 name: next-formularios-frontend
 description: 'Next.js forms: Zod schema shared by client and server, Server Actions validated with useActionState, inline errors per field and date/range traps. Use when building a form in a Next project, wiring a submit action, or when validation diverges from the backend contract. Triggers: "formularios", "validacion", "errores inline", "submit", "campos controlados", "fechas rango", "schema del formulario", "server actions forms", "use action state".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Formularios Frontend Next — schema Zod compartido, acción validada en el server

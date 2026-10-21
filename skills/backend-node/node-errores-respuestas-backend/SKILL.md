@@ -1,6 +1,8 @@
 ---
 name: node-errores-respuestas-backend
 description: 'Central error handler and uniform responses for Express backends. Use when implementing or fixing error handling, when controllers respond errors directly, when a 500 leaks error.message, or when adding a 404 catch-all. Triggers: "error 500", "manejo de errores", "error handler", "responder error", "404", "stack trace", "mensaje de error al cliente", "try catch", "revisar errores".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Backend Errores y Respuestas — un solo lugar construye el error

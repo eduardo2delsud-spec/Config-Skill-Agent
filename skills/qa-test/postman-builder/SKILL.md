@@ -1,6 +1,8 @@
 ---
 name: postman-builder
 description: 'Genera, modifica o actualiza colecciones Postman (JSON v2.1) desde el código de un backend Express: detecta prefix, parsea rutas, infiere bodies de schemas Joi/Zod y valida el JSON antes de escribir. Use when the user wants a Postman collection generated or updated from backend code. Triggers: "crear postman", "coleccion postman", "postman de X", "actualizar postman", "generar json postman".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Postman Builder — colección Postman v2.1 desde el código del backend

@@ -1,6 +1,8 @@
 ---
 name: node-arquitectura-backend
 description: 'Layered structure and dependency rules for Express backends. Use when creating a new backend, deciding where a new file or module goes, refactoring folder layout, or when imports cross layers. Triggers: "estructura del proyecto", "organizar carpetas", "dónde va este archivo", "separación de capas", "agregar una capa", "imports cruzados", "arquitectura de backend", "organizar módulos", "layout del backend".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Arquitectura Backend — capas con dependencias unidireccionales

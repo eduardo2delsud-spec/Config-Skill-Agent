@@ -44,6 +44,9 @@ Reglas:
 
 ## [Unreleased]
 
+- **Maintenance**: **Skills de stack fuera del catálogo anunciado para reducir el contexto inicial.** Se agregó `metadata.opencode/autoinvoke: false` a 27 skills de `backend-node`, `frontend-next`, `frontend-vite` y `qa-test` (`playwright-cli`, `postman-builder`); siguen registradas y se cargan por ID. `revision-codigo-global` se mantiene anunciada por ser de proceso. `node-testing-backend` se compactó a 150 líneas para no romper el techo de la suite. [2026-10-21]
+  * **Files (Archivos)**: `skills/backend-node/**/SKILL.md` (9), `skills/frontend-next/**/SKILL.md` (8), `skills/frontend-vite/**/SKILL.md` (8), `skills/qa-test/playwright-cli/SKILL.md`, `skills/qa-test/postman-builder/SKILL.md`, `CHANGELOG.md`. [2026-10-21]
+
 - **Fixed**: **Omisión de `accesibilidad-frontend` en el catálogo de hermanas de `frontend-vite` e inclusión de pruebas de skills en la suite principal.** La auditoría técnica del repositorio identificó que el agente `agents/frontend-vite.md` omitía `accesibilidad-frontend` en su listado numerado de skills hermanas (pese a que la skill forma parte integral del flujo SPA y estaba referenciada en la descripción del agente y en `AGENTS.md`). Asimismo, las 12 pruebas unitarias de `skills/documentacion/test/presentador.test.mjs` no estaban siendo ejecutadas por `npm test` ni en CI al estar configurado el script únicamente como `test/*.test.mjs`. Se actualizó `package.json` para ejecutar ambos conjuntos de pruebas en `npm test`, consolidando 111 tests automáticos en verde (99 estructurales + 12 funcionales). [2026-10-15]
   * **Files (Archivos)**: `agents/frontend-vite.md` (incorporación de `accesibilidad-frontend`), `package.json` (script `test` ampliado a `skills/documentacion/test/*.test.mjs`). [2026-10-15]
 

@@ -1,6 +1,8 @@
 ---
 name: vite-data-fetching-frontend
 description: 'Centralized HTTP client per feature plus TanStack Query for React frontends, including optimistic updates with rollback. Use when fetching data, adding API calls, migrating scattered fetch to queries, fixing cache invalidation, adding optimistic updates, or when two data layers coexist. Triggers: "data fetching", "tanstack query", "react-query", "fetch", "llamadas a la api", "cache", "invalidar cache", "cliente http", "hooks de datos", "optimistic", "actualizacion optimista".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Data Fetching Frontend — un cliente por feature, queries para el resto

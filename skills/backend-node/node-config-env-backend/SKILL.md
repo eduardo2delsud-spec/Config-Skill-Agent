@@ -1,6 +1,8 @@
 ---
 name: node-config-env-backend
 description: 'Backend environment config with a single validated source (fail-fast at boot). Use when adding or changing env variables, when the server starts half-configured, when a JWT/API key is missing, or to review env/secrets hygiene. Triggers: "agregar variable de entorno", "configurar env", "revisar config", "JWT_SECRET", "el server arranca a medias", "agregar API key", ".env.example", "secretos", "DATABASE_URL".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Backend Config Env — una única fuente + fail-fast

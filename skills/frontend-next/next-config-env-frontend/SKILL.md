@@ -1,6 +1,8 @@
 ---
 name: next-config-env-frontend
 description: 'Next.js env rules: NEXT_PUBLIC_ is the only client-visible prefix, everything else is server-only and import "server-only" protects it. Use when adding env vars to a Next project, reviewing .env files, or when a secret might reach the browser bundle. Triggers: "variables de entorno next", "NEXT_PUBLIC_", "server only", "secretos en el front", "env server next", "variables de entorno frontend".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Config Env Frontend Next — server-only por defecto, público solo con `NEXT_PUBLIC_`

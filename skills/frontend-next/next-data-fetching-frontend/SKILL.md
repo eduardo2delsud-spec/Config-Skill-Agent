@@ -1,6 +1,8 @@
 ---
 name: next-data-fetching-frontend
 description: 'Next.js data fetching: fetch in server components with an explicit cache strategy, Promise.all against waterfalls, Server Actions for mutations and revalidatePath/Tag to refresh. Use when loading data in a Next project, choosing a cache policy, adding mutations, or when fetches run twice or show stale data. Triggers: "data fetching", "fetch", "cache", "llamadas a la api", "invalidar cache", "optimistic", "revalidatepath", "revalidate tag", "datos en server components".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Data Fetching Next — fetch en el server, caché explícita, revalidación post-mutación

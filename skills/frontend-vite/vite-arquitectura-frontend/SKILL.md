@@ -1,6 +1,8 @@
 ---
 name: vite-arquitectura-frontend
 description: 'Canonical SPA structure, layer rules, component design and state decisions for React frontends. Use when creating a new frontend, deciding where a new file goes, organizing pages/components/hooks/api/store, choosing where state lives, or when imports cross features. Triggers: "estructura del frontend", "organizar carpetas", "dónde va este archivo", "por feature", "arquitectura frontend", "organizar componentes", "layout de la SPA", "imports cruzados", "prop drilling", "diseno de componentes", "donde guarda el estado".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Arquitectura Frontend — estructura canónica y capas por feature

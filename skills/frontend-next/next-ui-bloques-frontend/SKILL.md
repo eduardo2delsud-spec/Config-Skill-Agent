@@ -1,6 +1,8 @@
 ---
 name: next-ui-bloques-frontend
 description: 'Next.js transversal UI blocks: pagination synced to searchParams, design tokens/theme in globals.css, design-system adherence (anti AI-aesthetic), Intl helpers and accessible info modal. Use when adding lists, theming, date/currency formatting or help/changelog UI in a Next project. Triggers: "paginacion", "scroll infinito", "design tokens", "tema oscuro", "formato de fechas", "moneda", "changelog en la app", "manual de uso", "modal de informacion", "design system", "espaciado", "tipografia", "aesthetic", "searchparams".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # UI Bloques Next — `searchParams` como estado, tokens como única fuente de verdad

@@ -1,6 +1,8 @@
 ---
 name: vite-config-env-frontend
 description: 'Frontend environment variables with VITE_ prefix and zero secrets in the browser bundle. Use when adding env vars to a SPA, reviewing .env files, or when a secret might be exposed in the client. Triggers: "variables de entorno frontend", "VITE_", ".env.example", "secretos en el front", "config de vite", "import.meta.env", "exponer variable".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Config Env Frontend — solo lo público, con prefijo `VITE_`, cero secretos

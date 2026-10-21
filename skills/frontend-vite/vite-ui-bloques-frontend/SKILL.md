@@ -1,6 +1,8 @@
 ---
 name: vite-ui-bloques-frontend
 description: 'Transversal UI blocks for React SPAs: pagination synced to URL, design tokens/theme, design-system adherence (anti AI-aesthetic), Intl locale helpers, and info modal (changelog + manual). Use when adding lists, theming, date/currency formatting, help/changelog UI, or reviewing spacing/typography against the design system. Triggers: "paginacion", "scroll infinito", "design tokens", "tema oscuro", "formato de fechas", "moneda", "changelog en la app", "manual de uso", "modal de informacion", "design system", "espaciado", "tipografia", "aesthetic".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # UI Bloques — los bloques transversales que todo SPA trae una vez

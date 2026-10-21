@@ -1,6 +1,8 @@
 ---
 name: arquitectura-drizzle-backend
 description: 'Canonical file architecture for the Drizzle ORM data layer: one file per table, schema barrel, single client, relations, seeds and drizzle-kit migrations. Use when creating or reorganizing a Drizzle project, splitting a large schema file, deciding where a schema/seed/migration file goes, or when the layout of src/db is unclear — even if Drizzle is not named. Triggers: "estructura de drizzle", "organizar schemas", "donde va el schema", "un archivo por tabla", "schema drizzle", "estructura de la capa db", "drizzle.config", "drizzle migrations", "seed", "barrel".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Arquitectura Drizzle — un archivo por tabla, un cliente, un barrel

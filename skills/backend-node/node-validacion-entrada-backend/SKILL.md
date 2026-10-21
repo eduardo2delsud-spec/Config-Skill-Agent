@@ -1,6 +1,8 @@
 ---
 name: node-validacion-entrada-backend
 description: 'Request validation middleware (Joi/Zod) for Express backends. Use when adding endpoints with body/params/query, when validation is manual or missing, or to audit that every route with input is validated. Triggers: "validar body", "validar request", "Joi", "Zod", "validateBody", "400 bad request", "agregar endpoint", "params/query", "schema de validacion".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Backend Validación de Entrada — ninguna data llega al service sin pasar por un schema

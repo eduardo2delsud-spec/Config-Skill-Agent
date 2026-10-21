@@ -1,6 +1,8 @@
 ---
 name: vite-formularios-frontend
 description: 'Form handling and validation (Zod) for React SPAs, synced with the API contract, with inline errors and trap patterns. Use when building forms, validating input, handling submit/errors, or fixing date/range fields. Triggers: "formularios", "validacion", "zod", "errores inline", "submit", "campos controlados", "fechas rango", "schema del formulario".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Formularios Frontend — validación Zod sincronizada con el contrato

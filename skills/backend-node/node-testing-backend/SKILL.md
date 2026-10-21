@@ -1,6 +1,8 @@
 ---
 name: node-testing-backend
 description: 'Testing strategy for Express backends — unit, integration, and E2E tests with proper fixtures, mocking, and CI integration. Use when writing tests, setting up Jest/Vitest, mocking services, configuring test DB, or auditing test coverage. Triggers: "test", "jest", "vitest", "supertest", "mock", "cobertura", "coverage", "fixture", "CI falla", "test de integración", "testear endpoint".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Testing Backend — pirámide de tests con BD aislada y mocks explícitos
@@ -129,7 +131,6 @@ rg '\x22test\x22:' package.json
 ```
 
 ## Anti-patrones (cómo detectarlos)
-
 | Anti-patrón | Detección |
 |---|---|
 | Cero tests en el repo | `rg --files -g "*.test.*"` → sin salida = 0 |
@@ -141,7 +142,6 @@ rg '\x22test\x22:' package.json
 | Sin script de test en `package.json` | `rg '\x22test\x22' package.json` sin match |
 
 ## Solapamiento
-
 - `node-validacion-entrada-backend` — los schemas se testean con inputs válidos e inválidos.
 - `node-errores-respuestas-backend` — la integración verifica la shape de error y los códigos HTTP.
 - `node-config-env-backend` — la BD de test usa su propia `DATABASE_URL_TEST` en config.

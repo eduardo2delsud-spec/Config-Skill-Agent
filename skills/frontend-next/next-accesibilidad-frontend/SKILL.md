@@ -1,6 +1,8 @@
 ---
 name: next-accesibilidad-frontend
 description: 'Accesibilidad WCAG 2.1 AA y responsive mobile-first en Next.js App Router: teclado completo, ARIA correcta, foco tras la navegación del router, contraste 4.5:1 y headings por segmento. Use when building or reviewing UI in a Next project, auditing a11y, or when the app fails with keyboard or screen readers. Triggers: "accesibilidad", "a11y", "WCAG", "lector de pantalla", "teclado", "foco", "contraste", "responsive", "mobile first", "breakpoints", "aria-label", "accesibilidad next".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Accesibilidad y Responsive Next — WCAG 2.1 AA + mobile-first en App Router

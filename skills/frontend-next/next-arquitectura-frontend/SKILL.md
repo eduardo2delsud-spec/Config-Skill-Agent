@@ -1,6 +1,8 @@
 ---
 name: next-arquitectura-frontend
 description: 'App Router structure for Next.js: app/ tree, server components by default, minimal use client, route groups and layer rules. Use when creating a new Next project, deciding where a page/layout/component goes, or when imports cross segments or too many files are client components. Triggers: "estructura del frontend", "por feature", "arquitectura frontend", "organizar componentes", "prop drilling", "diseno de componentes", "donde guarda el estado", "app router", "estructura de app", "route groups", "server components".'
+metadata:
+  opencode/autoinvoke: false
 ---
 
 # Arquitectura Frontend Next — `app/` por segmentos, server por defecto
